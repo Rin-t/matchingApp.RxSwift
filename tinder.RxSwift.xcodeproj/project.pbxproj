@@ -13,6 +13,8 @@
 		2430761D26EF3013006637CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2430761C26EF3013006637CC /* Assets.xcassets */; };
 		2430762026EF3013006637CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2430761E26EF3013006637CC /* LaunchScreen.storyboard */; };
 		2430762A26EF38C5006637CC /* BottomControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2430762926EF38C5006637CC /* BottomControlView.swift */; };
+		245E5A2226EF54EA001D3D46 /* UIimage-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245E5A2126EF54EA001D3D46 /* UIimage-Extension.swift */; };
+		245E5A2526EF6332001D3D46 /* TopControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245E5A2426EF6332001D3D46 /* TopControlView.swift */; };
 		E79116B408EC1AC5740DD5FA /* Pods_tinder_RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041BC991E48B13269DCEE67A /* Pods_tinder_RxSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +28,8 @@
 		2430761F26EF3013006637CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2430762126EF3013006637CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2430762926EF38C5006637CC /* BottomControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControlView.swift; sourceTree = "<group>"; };
+		245E5A2126EF54EA001D3D46 /* UIimage-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIimage-Extension.swift"; sourceTree = "<group>"; };
+		245E5A2426EF6332001D3D46 /* TopControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopControlView.swift; sourceTree = "<group>"; };
 		5743FD2C68C3D5E94EF8E889 /* Pods-tinder.RxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tinder.RxSwift.release.xcconfig"; path = "Target Support Files/Pods-tinder.RxSwift/Pods-tinder.RxSwift.release.xcconfig"; sourceTree = "<group>"; };
 		D66F26AC4D99513D775C7AC9 /* Pods-tinder.RxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tinder.RxSwift.debug.xcconfig"; path = "Target Support Files/Pods-tinder.RxSwift/Pods-tinder.RxSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,6 +67,7 @@
 		2430761226EF3011006637CC /* tinder.RxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				245E5A2326EF54EF001D3D46 /* Extensions */,
 				2430762826EF389E006637CC /* Views */,
 				2430762726EF3873006637CC /* ViewControllers */,
 				2430761326EF3011006637CC /* AppDelegate.swift */,
@@ -86,8 +91,17 @@
 			isa = PBXGroup;
 			children = (
 				2430762926EF38C5006637CC /* BottomControlView.swift */,
+				245E5A2426EF6332001D3D46 /* TopControlView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		245E5A2326EF54EF001D3D46 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				245E5A2126EF54EA001D3D46 /* UIimage-Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		2878247F725D2A8657F03653 /* Frameworks */ = {
@@ -220,9 +234,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				245E5A2526EF6332001D3D46 /* TopControlView.swift in Sources */,
 				2430761826EF3011006637CC /* HomeViewController.swift in Sources */,
 				2430761426EF3011006637CC /* AppDelegate.swift in Sources */,
 				2430761626EF3011006637CC /* SceneDelegate.swift in Sources */,
+				245E5A2226EF54EA001D3D46 /* UIimage-Extension.swift in Sources */,
 				2430762A26EF38C5006637CC /* BottomControlView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
