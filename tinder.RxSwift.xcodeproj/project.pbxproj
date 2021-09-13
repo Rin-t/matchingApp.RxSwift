@@ -13,9 +13,11 @@
 		2430761B26EF3011006637CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2430761926EF3011006637CC /* Main.storyboard */; };
 		2430761D26EF3013006637CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2430761C26EF3013006637CC /* Assets.xcassets */; };
 		2430762026EF3013006637CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2430761E26EF3013006637CC /* LaunchScreen.storyboard */; };
+		E79116B408EC1AC5740DD5FA /* Pods_tinder_RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041BC991E48B13269DCEE67A /* Pods_tinder_RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041BC991E48B13269DCEE67A /* Pods_tinder_RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tinder_RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2430761026EF3011006637CC /* tinder.RxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tinder.RxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2430761326EF3011006637CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2430761526EF3011006637CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +26,8 @@
 		2430761C26EF3013006637CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2430761F26EF3013006637CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2430762126EF3013006637CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5743FD2C68C3D5E94EF8E889 /* Pods-tinder.RxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tinder.RxSwift.release.xcconfig"; path = "Target Support Files/Pods-tinder.RxSwift/Pods-tinder.RxSwift.release.xcconfig"; sourceTree = "<group>"; };
+		D66F26AC4D99513D775C7AC9 /* Pods-tinder.RxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tinder.RxSwift.debug.xcconfig"; path = "Target Support Files/Pods-tinder.RxSwift/Pods-tinder.RxSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E79116B408EC1AC5740DD5FA /* Pods_tinder_RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				2430761226EF3011006637CC /* tinder.RxSwift */,
 				2430761126EF3011006637CC /* Products */,
+				D49C1BFA6B19C16A957944CD /* Pods */,
+				2878247F725D2A8657F03653 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = tinder.RxSwift;
 			sourceTree = "<group>";
 		};
+		2878247F725D2A8657F03653 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				041BC991E48B13269DCEE67A /* Pods_tinder_RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D49C1BFA6B19C16A957944CD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D66F26AC4D99513D775C7AC9 /* Pods-tinder.RxSwift.debug.xcconfig */,
+				5743FD2C68C3D5E94EF8E889 /* Pods-tinder.RxSwift.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2430762426EF3013006637CC /* Build configuration list for PBXNativeTarget "tinder.RxSwift" */;
 			buildPhases = (
+				62529DBD2062DD3FA0380CD9 /* [CP] Check Pods Manifest.lock */,
 				2430760C26EF3011006637CC /* Sources */,
 				2430760D26EF3011006637CC /* Frameworks */,
 				2430760E26EF3011006637CC /* Resources */,
+				4062C2960AD22D4CB805E4E7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4062C2960AD22D4CB805E4E7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tinder.RxSwift/Pods-tinder.RxSwift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-tinder.RxSwift/Pods-tinder.RxSwift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tinder.RxSwift/Pods-tinder.RxSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62529DBD2062DD3FA0380CD9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tinder.RxSwift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2430760C26EF3011006637CC /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		2430762526EF3013006637CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D66F26AC4D99513D775C7AC9 /* Pods-tinder.RxSwift.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		2430762626EF3013006637CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5743FD2C68C3D5E94EF8E889 /* Pods-tinder.RxSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
