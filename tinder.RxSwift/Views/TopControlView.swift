@@ -44,11 +44,13 @@ class TopControlView: UIView {
 
         addSubview(basestackView)
 
-        [basestackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-         basestackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-         basestackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 40),
-         basestackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -40),
-        ].forEach { $0.isActive = true }
+//        [basestackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+//         basestackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+//         basestackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 40),
+//         basestackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -40),
+//        ].forEach { $0.isActive = true }
+
+        basestackView.anchor(top: topAnchor, bottom: bottomAnchor, left: leftAnchor, right: rightAnchor, leftPadding: 40, rightPadding: -40)
 
         tinderButton.isSelected = true
     }
@@ -56,27 +58,38 @@ class TopControlView: UIView {
     private func setupBindings() {
 
         tinderButton.rx.tap
-            .subscribe { _ in
+            // driver
+            // errorを流さない、mainスレッドでの処理が保証されている
+            // buttonのタップではエラーが起こらないからdriverでいい
+            .asDriver()
+            .drive(onNext: { [weak self] _ in
+                guard let self = self else { return }
                 self.handleSelectedButton(selectedButton: self.tinderButton)
-            }
+            })
             .disposed(by: disposeBag)
 
         goodButton.rx.tap
-            .subscribe { _ in
+            .asDriver()
+            .drive(onNext: { [weak self] _ in
+                guard let self = self else { return }
                 self.handleSelectedButton(selectedButton: self.goodButton)
-            }
+            })
             .disposed(by: disposeBag)
 
         commentButton.rx.tap
-            .subscribe { _ in
+            .asDriver()
+            .drive(onNext: { [weak self] _ in
+                guard let self = self else { return }
                 self.handleSelectedButton(selectedButton: self.commentButton)
-            }
+            })
             .disposed(by: disposeBag)
 
         profileButton.rx.tap
-            .subscribe { _ in
+            .asDriver()
+            .drive(onNext: { [weak self] _ in
+                guard let self = self else { return }
                 self.handleSelectedButton(selectedButton: self.profileButton)
-            }
+            })
             .disposed(by: disposeBag)
     }
 

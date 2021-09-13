@@ -26,13 +26,14 @@ final class BottomControlView: UIView {
         basestackView.translatesAutoresizingMaskIntoConstraints = false
 
         addSubview(basestackView)
+        basestackView.anchor(top: topAnchor, bottom: bottomAnchor, left: leftAnchor, right: rightAnchor, leftPadding: 10, rightPadding: -10)
 
-        [basestackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-         basestackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
-         basestackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
-         basestackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
-
-        ].forEach { $0.isActive = true }
+//        [basestackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+//         basestackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
+//         basestackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
+//         basestackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
+//
+//        ].forEach { $0.isActive = true }
 
     }
 
@@ -62,10 +63,12 @@ class BottomButtonView: UIView {
         guard let button = button else { return }
         addSubview(button)
 
-        [button.centerYAnchor.constraint(equalTo: centerYAnchor),
-        button.centerXAnchor.constraint(equalTo: centerXAnchor),
-        button.widthAnchor.constraint(equalToConstant: width),
-        button.heightAnchor.constraint(equalToConstant: width)].forEach { $0.isActive = true }
+        button.anchor(centerY: centerYAnchor, centerX: centerXAnchor, width: width, height: width)
+
+//        [button.centerYAnchor.constraint(equalTo: centerYAnchor),
+//        button.centerXAnchor.constraint(equalTo: centerXAnchor),
+//        button.widthAnchor.constraint(equalToConstant: width),
+//        button.heightAnchor.constraint(equalToConstant: width)].forEach { $0.isActive = true }
     }
 
     required init?(coder: NSCoder) {
