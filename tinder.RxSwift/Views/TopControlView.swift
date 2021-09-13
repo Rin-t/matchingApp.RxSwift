@@ -9,7 +9,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class TopControlView: UIView {
+final class TopControlView: UIView {
 
     private let disposeBag = DisposeBag()
 
@@ -50,7 +50,7 @@ class TopControlView: UIView {
 //         basestackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -40),
 //        ].forEach { $0.isActive = true }
 
-        basestackView.anchor(top: topAnchor, bottom: bottomAnchor, left: leftAnchor, right: rightAnchor, leftPadding: 40, rightPadding: -40)
+        basestackView.anchor(top: topAnchor, bottom: bottomAnchor, left: leftAnchor, right: rightAnchor, leftPadding: 40, rightPadding: 40)
 
         tinderButton.isSelected = true
     }

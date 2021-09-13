@@ -29,13 +29,13 @@ extension UIView {
             self.topAnchor.constraint(equalTo: top, constant: topPadding).isActive = true
         }
         if let bottom = bottom {
-            self.bottomAnchor.constraint(equalTo: bottom, constant: bottomPadding).isActive = true
+            self.bottomAnchor.constraint(equalTo: bottom, constant: -bottomPadding).isActive = true
         }
         if let left = left {
             self.leftAnchor.constraint(equalTo: left, constant: leftPadding).isActive = true
         }
         if let right = right {
-            self.rightAnchor.constraint(equalTo: right, constant: rightPadding).isActive = true
+            self.rightAnchor.constraint(equalTo: right, constant: -rightPadding).isActive = true
         }
         if let centerY = centerY {
             self.centerYAnchor.constraint(equalTo: centerY).isActive = true

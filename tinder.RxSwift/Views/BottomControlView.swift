@@ -18,7 +18,6 @@ final class BottomControlView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .white
         let basestackView = UIStackView(arrangedSubviews: [reloadView, nopeView, superlikeView, likeView, boostView])
         basestackView.axis = .horizontal
         basestackView.distribution = .fillEqually
@@ -26,7 +25,7 @@ final class BottomControlView: UIView {
         basestackView.translatesAutoresizingMaskIntoConstraints = false
 
         addSubview(basestackView)
-        basestackView.anchor(top: topAnchor, bottom: bottomAnchor, left: leftAnchor, right: rightAnchor, leftPadding: 10, rightPadding: -10)
+        basestackView.anchor(top: topAnchor, bottom: bottomAnchor, left: leftAnchor, right: rightAnchor, leftPadding: 10, rightPadding: 10)
 
 //        [basestackView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
 //         basestackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
@@ -43,7 +42,7 @@ final class BottomControlView: UIView {
 
 }
 
-class BottomButtonView: UIView {
+final class BottomButtonView: UIView {
 
     var button: BottomButton?
 
@@ -91,8 +90,6 @@ class BottomButton: UIButton {
                     self.layoutIfNeeded()
                 }
             }
-
-
         }
     }
 
