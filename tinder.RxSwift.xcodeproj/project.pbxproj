@@ -3,16 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2430761426EF3011006637CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2430761326EF3011006637CC /* AppDelegate.swift */; };
 		2430761626EF3011006637CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2430761526EF3011006637CC /* SceneDelegate.swift */; };
-		2430761826EF3011006637CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2430761726EF3011006637CC /* ViewController.swift */; };
-		2430761B26EF3011006637CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2430761926EF3011006637CC /* Main.storyboard */; };
+		2430761826EF3011006637CC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2430761726EF3011006637CC /* HomeViewController.swift */; };
 		2430761D26EF3013006637CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2430761C26EF3013006637CC /* Assets.xcassets */; };
 		2430762026EF3013006637CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2430761E26EF3013006637CC /* LaunchScreen.storyboard */; };
+		2430762A26EF38C5006637CC /* BottomControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2430762926EF38C5006637CC /* BottomControlView.swift */; };
 		E79116B408EC1AC5740DD5FA /* Pods_tinder_RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041BC991E48B13269DCEE67A /* Pods_tinder_RxSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,11 +21,11 @@
 		2430761026EF3011006637CC /* tinder.RxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tinder.RxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2430761326EF3011006637CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2430761526EF3011006637CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2430761726EF3011006637CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2430761A26EF3011006637CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2430761726EF3011006637CC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2430761C26EF3013006637CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2430761F26EF3013006637CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2430762126EF3013006637CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2430762926EF38C5006637CC /* BottomControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomControlView.swift; sourceTree = "<group>"; };
 		5743FD2C68C3D5E94EF8E889 /* Pods-tinder.RxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tinder.RxSwift.release.xcconfig"; path = "Target Support Files/Pods-tinder.RxSwift/Pods-tinder.RxSwift.release.xcconfig"; sourceTree = "<group>"; };
 		D66F26AC4D99513D775C7AC9 /* Pods-tinder.RxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tinder.RxSwift.debug.xcconfig"; path = "Target Support Files/Pods-tinder.RxSwift/Pods-tinder.RxSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,15 +63,31 @@
 		2430761226EF3011006637CC /* tinder.RxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				2430762826EF389E006637CC /* Views */,
+				2430762726EF3873006637CC /* ViewControllers */,
 				2430761326EF3011006637CC /* AppDelegate.swift */,
 				2430761526EF3011006637CC /* SceneDelegate.swift */,
-				2430761726EF3011006637CC /* ViewController.swift */,
-				2430761926EF3011006637CC /* Main.storyboard */,
 				2430761C26EF3013006637CC /* Assets.xcassets */,
 				2430761E26EF3013006637CC /* LaunchScreen.storyboard */,
 				2430762126EF3013006637CC /* Info.plist */,
 			);
 			path = tinder.RxSwift;
+			sourceTree = "<group>";
+		};
+		2430762726EF3873006637CC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2430761726EF3011006637CC /* HomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2430762826EF389E006637CC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2430762926EF38C5006637CC /* BottomControlView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		2878247F725D2A8657F03653 /* Frameworks */ = {
@@ -88,7 +104,6 @@
 				D66F26AC4D99513D775C7AC9 /* Pods-tinder.RxSwift.debug.xcconfig */,
 				5743FD2C68C3D5E94EF8E889 /* Pods-tinder.RxSwift.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -153,7 +168,6 @@
 			files = (
 				2430762026EF3013006637CC /* LaunchScreen.storyboard in Resources */,
 				2430761D26EF3013006637CC /* Assets.xcassets in Resources */,
-				2430761B26EF3011006637CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,23 +220,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2430761826EF3011006637CC /* ViewController.swift in Sources */,
+				2430761826EF3011006637CC /* HomeViewController.swift in Sources */,
 				2430761426EF3011006637CC /* AppDelegate.swift in Sources */,
 				2430761626EF3011006637CC /* SceneDelegate.swift in Sources */,
+				2430762A26EF38C5006637CC /* BottomControlView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2430761926EF3011006637CC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2430761A26EF3011006637CC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2430761E26EF3013006637CC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
