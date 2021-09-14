@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2421CE7526F05392002C22AD /* UIColor-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2421CE7426F05392002C22AD /* UIColor-Extension.swift */; };
+		2421CE7726F0642F002C22AD /* CardInfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2421CE7626F0642F002C22AD /* CardInfoLabel.swift */; };
 		2430761426EF3011006637CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2430761326EF3011006637CC /* AppDelegate.swift */; };
 		2430761626EF3011006637CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2430761526EF3011006637CC /* SceneDelegate.swift */; };
 		2430761826EF3011006637CC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2430761726EF3011006637CC /* HomeViewController.swift */; };
@@ -17,11 +19,15 @@
 		245E5A2526EF6332001D3D46 /* TopControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245E5A2426EF6332001D3D46 /* TopControlView.swift */; };
 		245E5A2726EF9A2A001D3D46 /* UIview-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245E5A2626EF9A2A001D3D46 /* UIview-Extension.swift */; };
 		245E5A2926EFA6C1001D3D46 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245E5A2826EFA6C1001D3D46 /* CardView.swift */; };
+		2475E77E26F070A60069D00C /* UIbutton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E77D26F070A60069D00C /* UIbutton-Extension.swift */; };
+		2475E78026F071690069D00C /* CardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E77F26F071690069D00C /* CardImageView.swift */; };
 		E79116B408EC1AC5740DD5FA /* Pods_tinder_RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 041BC991E48B13269DCEE67A /* Pods_tinder_RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		041BC991E48B13269DCEE67A /* Pods_tinder_RxSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tinder_RxSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2421CE7426F05392002C22AD /* UIColor-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor-Extension.swift"; sourceTree = "<group>"; };
+		2421CE7626F0642F002C22AD /* CardInfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardInfoLabel.swift; sourceTree = "<group>"; };
 		2430761026EF3011006637CC /* tinder.RxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tinder.RxSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2430761326EF3011006637CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2430761526EF3011006637CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +40,8 @@
 		245E5A2426EF6332001D3D46 /* TopControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopControlView.swift; sourceTree = "<group>"; };
 		245E5A2626EF9A2A001D3D46 /* UIview-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIview-Extension.swift"; sourceTree = "<group>"; };
 		245E5A2826EFA6C1001D3D46 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		2475E77D26F070A60069D00C /* UIbutton-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIbutton-Extension.swift"; sourceTree = "<group>"; };
+		2475E77F26F071690069D00C /* CardImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageView.swift; sourceTree = "<group>"; };
 		5743FD2C68C3D5E94EF8E889 /* Pods-tinder.RxSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tinder.RxSwift.release.xcconfig"; path = "Target Support Files/Pods-tinder.RxSwift/Pods-tinder.RxSwift.release.xcconfig"; sourceTree = "<group>"; };
 		D66F26AC4D99513D775C7AC9 /* Pods-tinder.RxSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tinder.RxSwift.debug.xcconfig"; path = "Target Support Files/Pods-tinder.RxSwift/Pods-tinder.RxSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +105,8 @@
 				2430762926EF38C5006637CC /* BottomControlView.swift */,
 				245E5A2426EF6332001D3D46 /* TopControlView.swift */,
 				245E5A2826EFA6C1001D3D46 /* CardView.swift */,
+				2421CE7626F0642F002C22AD /* CardInfoLabel.swift */,
+				2475E77F26F071690069D00C /* CardImageView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -106,6 +116,8 @@
 			children = (
 				245E5A2126EF54EA001D3D46 /* UIimage-Extension.swift */,
 				245E5A2626EF9A2A001D3D46 /* UIview-Extension.swift */,
+				2421CE7426F05392002C22AD /* UIColor-Extension.swift */,
+				2475E77D26F070A60069D00C /* UIbutton-Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -242,11 +254,15 @@
 			files = (
 				245E5A2526EF6332001D3D46 /* TopControlView.swift in Sources */,
 				2430761826EF3011006637CC /* HomeViewController.swift in Sources */,
+				2421CE7726F0642F002C22AD /* CardInfoLabel.swift in Sources */,
 				245E5A2726EF9A2A001D3D46 /* UIview-Extension.swift in Sources */,
+				2475E77E26F070A60069D00C /* UIbutton-Extension.swift in Sources */,
 				2430761426EF3011006637CC /* AppDelegate.swift in Sources */,
+				2421CE7526F05392002C22AD /* UIColor-Extension.swift in Sources */,
 				2430761626EF3011006637CC /* SceneDelegate.swift in Sources */,
 				245E5A2226EF54EA001D3D46 /* UIimage-Extension.swift in Sources */,
 				245E5A2926EFA6C1001D3D46 /* CardView.swift in Sources */,
+				2475E78026F071690069D00C /* CardImageView.swift in Sources */,
 				2430762A26EF38C5006637CC /* BottomControlView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
