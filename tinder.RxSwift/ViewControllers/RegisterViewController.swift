@@ -8,10 +8,12 @@
 import UIKit
 import RxSwift
 import FirebaseAuth
+import FirebaseFirestore
 
 class RegisterViewController: UIViewController {
 
     private let disposeBag = DisposeBag()
+    private let viewModel = RegisterViewModel()
 
     //MARK: - UIViews
     private let titleLabel = RegisterTitleLabel()
@@ -40,6 +42,7 @@ class RegisterViewController: UIViewController {
     }
 
     private func setupLayout() {
+        passwordTextField.isSecureTextEntry = true
         let baseStackView = UIStackView(arrangedSubviews: [nameTextField, emailTextField, passwordTextField, registerButton])
         baseStackView.axis = .vertical
         baseStackView.distribution = .fillEqually
@@ -58,44 +61,50 @@ class RegisterViewController: UIViewController {
         nameTextField.rx.text
             .asDriver()
             .drive { [weak self] text in
-                // textのハンドル
+                self?.viewModel.nameTextInput.onNext(text ?? "")
             }
             .disposed(by: disposeBag)
 
         emailTextField.rx.text
             .asDriver()
             .drive { [weak self] text in
-                // textのハンドル
+                self?.viewModel.emailTextInput.onNext(text ?? "")
             }
             .disposed(by: disposeBag)
 
         passwordTextField.rx.text
             .asDriver()
             .drive { [weak self] text in
-                // textのハンドル
+                self?.viewModel.passwordTextInput.onNext(text ?? "")
             }
             .disposed(by: disposeBag)
 
         registerButton.rx.tap
             .asDriver()
             .drive { [weak self] _ in
-                //
-                self?.createUserToFireAuth()
+                self?.createUser()
             }
             .disposed(by: disposeBag)
 
+        // viewmodelのBinding
+        viewModel.validRegisterDriver
+            .drive { validAll in
+                self.registerButton.isEnabled = validAll
+                self.registerButton.backgroundColor = validAll ? .rgb(red: 227, green: 48, blue: 78) : .init(white: 0.7, alpha: 1)
+            }
+            .disposed(by: disposeBag)
     }
 
-    private func createUserToFireAuth() {
-        guard let email = emailTextField.text else { return }
-        guard let password = passwordTextField.text else { return }
-        Auth.auth().createUser(withEmail: email, password: password) { auth, err in
-            if let err = err {
-                print("auth情報の作成に失敗", err)
-                return
+    private func createUser() {
+        let email = emailTextField.text
+        let password = passwordTextField.text
+        let name = nameTextField.text
+        Auth.createUserToFireAuth(email: email, password: password, name: name) { success in
+            if success {
+                print("処理完了")
+            } else {
+                print("処理失敗")
             }
-            guard let uid = auth?.user.uid else { return }
-            print("auth情報の保存に成功", uid)
         }
     }
 }
