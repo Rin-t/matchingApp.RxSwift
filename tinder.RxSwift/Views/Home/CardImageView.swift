@@ -9,8 +9,8 @@ import UIKit
 
 final class CardImageView: UIImageView {
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init() {
+        super.init(frame: .zero)
         backgroundColor = .blue
         layer.cornerRadius = 10
         contentMode = .scaleAspectFill

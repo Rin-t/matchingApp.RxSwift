@@ -9,8 +9,8 @@ import UIKit
 
 final class CardInfoLabel: UILabel {
 
-    init(frame: CGRect, labelText: String, labelColor: UIColor) {
-        super.init(frame: frame)
+    init(labelText: String, labelColor: UIColor) {
+        super.init(frame: .zero)
 
         font = .systemFont(ofSize: 45)
         text = labelText
@@ -23,8 +23,8 @@ final class CardInfoLabel: UILabel {
     }
 
     // その他のラベル
-    init(frame: CGRect, labelText: String, labelFont: UIFont) {
-        super.init(frame: frame)
+    init(labelText: String, labelFont: UIFont) {
+        super.init(frame: .zero)
 
         font = labelFont
         textColor = .white

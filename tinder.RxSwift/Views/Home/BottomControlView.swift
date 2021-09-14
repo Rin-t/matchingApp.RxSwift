@@ -16,8 +16,8 @@ final class BottomControlView: UIView {
     let boostView = BottomButtonView(frame: .zero, width: 50, imageName: "boost")
 
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    init() {
+        super.init(frame: .zero)
         let basestackView = UIStackView(arrangedSubviews: [reloadView, nopeView, superlikeView, likeView, boostView])
         basestackView.axis = .horizontal
         basestackView.distribution = .fillEqually
@@ -31,7 +31,6 @@ final class BottomControlView: UIView {
 //         basestackView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor),
 //         basestackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 10),
 //         basestackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -10),
-//
 //        ].forEach { $0.isActive = true }
 
     }
@@ -63,11 +62,6 @@ final class BottomButtonView: UIView {
         addSubview(button)
 
         button.anchor(centerY: centerYAnchor, centerX: centerXAnchor, width: width, height: width)
-
-//        [button.centerYAnchor.constraint(equalTo: centerYAnchor),
-//        button.centerXAnchor.constraint(equalTo: centerXAnchor),
-//        button.widthAnchor.constraint(equalToConstant: width),
-//        button.heightAnchor.constraint(equalToConstant: width)].forEach { $0.isActive = true }
     }
 
     required init?(coder: NSCoder) {

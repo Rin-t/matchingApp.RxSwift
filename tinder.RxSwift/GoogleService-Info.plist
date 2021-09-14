@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>43085639991-9n0v35v2ek0fa07cpq1k4v4rb0m59hdp.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.43085639991-9n0v35v2ek0fa07cpq1k4v4rb0m59hdp</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCDlHk8TPIAFZv9R3lDYPDATyMOliZxxZI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>43085639991</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.r.t.astronomy.tinder-RxSwift</string>
+	<key>PROJECT_ID</key>
+	<string>matchingapp-2d517</string>
+	<key>STORAGE_BUCKET</key>
+	<string>matchingapp-2d517.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:43085639991:ios:0779e99eb96810fed2eab2</string>
+</dict>
+</plist>
