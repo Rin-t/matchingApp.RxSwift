@@ -15,9 +15,9 @@ final class RegisterButton: UIButton {
         }
     }
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setTitle("登録", for: .normal)
+    init(text: String) {
+        super.init(frame: .zero)
+        setTitle(text, for: .normal)
         backgroundColor = UIColor.rgb(red: 227, green: 48, blue: 78)
         setTitleColor(.white, for: .normal)
         layer.cornerRadius = 10

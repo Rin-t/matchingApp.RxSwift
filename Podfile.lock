@@ -480,6 +480,7 @@ PODS:
     - nanopb/encode (= 2.30908.0)
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
+  - PKHUD (5.3.0)
   - PromisesObjC (2.0.0)
   - RxCocoa (6.2.0):
     - RxRelay (= 6.2.0)
@@ -493,6 +494,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Firestore
   - Firebase/Storage
+  - PKHUD (~> 5.0)
   - RxCocoa
   - RxSwift
 
@@ -516,6 +518,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - leveldb-library
     - nanopb
+    - PKHUD
     - PromisesObjC
     - RxCocoa
     - RxRelay
@@ -540,11 +543,12 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 43748f93435c2aa068b1cbe39655aaf600652e91
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
+  PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
   RxRelay: e72dbfd157807478401ef1982e1c61c945c94b2f
   RxSwift: d356ab7bee873611322f134c5f9ef379fa183d8f
 
-PODFILE CHECKSUM: 40b54d129bc9e170010943dc6077e90357e39216
+PODFILE CHECKSUM: 6dc028bfd451633703838d0ae8cc12c75136b791
 
 COCOAPODS: 1.10.1

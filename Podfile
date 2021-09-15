@@ -8,11 +8,13 @@ target 'tinder.RxSwift' do
   # Pods for tinder.RxSwift
 
   pod 'RxSwift'
-  pod 'RxCocoa' 
+  pod 'RxCocoa'
   pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
+  pod 'PKHUD', '~> 5.0'
+
 
 end
 

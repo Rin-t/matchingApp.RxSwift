@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import FirebaseAuth
 import FirebaseFirestore
+import PKHUD
 
 class RegisterViewController: UIViewController {
 
@@ -16,17 +17,23 @@ class RegisterViewController: UIViewController {
     private let viewModel = RegisterViewModel()
 
     //MARK: - UIViews
-    private let titleLabel = RegisterTitleLabel()
+    private let titleLabel = RegisterTitleLabel(text: "Tinder")
     private let nameTextField = RegisterTextField(frame: .zero, placeHolder: "名前", fontSize: 14)
     private let emailTextField = RegisterTextField(frame: .zero, placeHolder: "email", fontSize: 14)
     private let passwordTextField = RegisterTextField(frame: .zero, placeHolder: "passward", fontSize: 14)
-    private let registerButton = RegisterButton()
+    private let registerButton = RegisterButton(text: "登録")
+    private let alreadyRegisterdButton = UIButton(type: .system).createAboutAccountButton(text: "アカウントをお持ちの方はこちら")
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGradientLayout()
         setupLayout()
         setupBindings()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
     }
 
     //MARK: - methods
@@ -50,10 +57,12 @@ class RegisterViewController: UIViewController {
 
         view.addSubview(baseStackView)
         view.addSubview(titleLabel)
+        view.addSubview(alreadyRegisterdButton)
 
         nameTextField.anchor(height: 40)
         baseStackView.anchor(left: view.leftAnchor, right: view.rightAnchor, centerY: view.centerYAnchor, leftPadding: 40, rightPadding: 40)
         titleLabel.anchor(bottom: baseStackView.topAnchor, centerX: view.centerXAnchor, bottomPadding: 20)
+        alreadyRegisterdButton.anchor(top: baseStackView.bottomAnchor, centerX: view.centerXAnchor, topPadding: 20)
     }
 
     private func setupBindings() {
@@ -79,10 +88,19 @@ class RegisterViewController: UIViewController {
             }
             .disposed(by: disposeBag)
 
+        // buttonのbinding
         registerButton.rx.tap
             .asDriver()
             .drive { [weak self] _ in
                 self?.createUser()
+            }
+            .disposed(by: disposeBag)
+
+        alreadyRegisterdButton.rx.tap
+            .asDriver()
+            .drive { [weak self] _ in
+                let login = LoginViewController()
+                self?.navigationController?.pushViewController(login, animated: true)
             }
             .disposed(by: disposeBag)
 
@@ -99,7 +117,10 @@ class RegisterViewController: UIViewController {
         let email = emailTextField.text
         let password = passwordTextField.text
         let name = nameTextField.text
+
+        HUD.show(.progress)
         Auth.createUserToFireAuth(email: email, password: password, name: name) { success in
+            HUD.hide()
             if success {
                 print("処理完了")
                 self.dismiss(animated: true, completion: nil)
