@@ -22,6 +22,8 @@
 		2461B54426F2088A009BB1AD /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461B54326F2088A009BB1AD /* ProfileViewController.swift */; };
 		2461B54726F20B37009BB1AD /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461B54626F20B37009BB1AD /* ProfileImageView.swift */; };
 		2461B54926F20BBE009BB1AD /* ProfileLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461B54826F20BBE009BB1AD /* ProfileLabel.swift */; };
+		2461B54B26F23FFC009BB1AD /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461B54A26F23FFC009BB1AD /* ProfileTextField.swift */; };
+		2461B54E26F250C1009BB1AD /* InfoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2461B54D26F250C1009BB1AD /* InfoCollectionViewCell.swift */; };
 		2475E77E26F070A60069D00C /* UIButton-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E77D26F070A60069D00C /* UIButton-Extension.swift */; };
 		2475E78026F071690069D00C /* CardImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E77F26F071690069D00C /* CardImageView.swift */; };
 		2479795626F075DB00A6D029 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2479795526F075DB00A6D029 /* GoogleService-Info.plist */; };
@@ -55,6 +57,8 @@
 		2461B54326F2088A009BB1AD /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2461B54626F20B37009BB1AD /* ProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
 		2461B54826F20BBE009BB1AD /* ProfileLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileLabel.swift; sourceTree = "<group>"; };
+		2461B54A26F23FFC009BB1AD /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextField.swift; sourceTree = "<group>"; };
+		2461B54D26F250C1009BB1AD /* InfoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCollectionViewCell.swift; sourceTree = "<group>"; };
 		2475E77D26F070A60069D00C /* UIButton-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton-Extension.swift"; sourceTree = "<group>"; };
 		2475E77F26F071690069D00C /* CardImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImageView.swift; sourceTree = "<group>"; };
 		2479795526F075DB00A6D029 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 		2430761226EF3011006637CC /* tinder.RxSwift */ = {
 			isa = PBXGroup;
 			children = (
+				2461B54C26F250AA009BB1AD /* Cells */,
 				247A121B26F1C0F900A771B6 /* Models */,
 				245E5A2326EF54EF001D3D46 /* Extensions */,
 				247A121326F0C63B00A771B6 /* ViewModel */,
@@ -156,8 +161,17 @@
 			children = (
 				2461B54626F20B37009BB1AD /* ProfileImageView.swift */,
 				2461B54826F20BBE009BB1AD /* ProfileLabel.swift */,
+				2461B54A26F23FFC009BB1AD /* ProfileTextField.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		2461B54C26F250AA009BB1AD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2461B54D26F250C1009BB1AD /* InfoCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		247A120B26F0882D00A771B6 /* Home */ = {
@@ -329,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2461B54E26F250C1009BB1AD /* InfoCollectionViewCell.swift in Sources */,
 				247A121226F08F8600A771B6 /* RegisterButton.swift in Sources */,
 				245E5A2526EF6332001D3D46 /* TopControlView.swift in Sources */,
 				2430761826EF3011006637CC /* HomeViewController.swift in Sources */,
@@ -340,6 +355,7 @@
 				247A121D26F1C10A00A771B6 /* User.swift in Sources */,
 				2430761426EF3011006637CC /* AppDelegate.swift in Sources */,
 				247A121726F0FBC800A771B6 /* Firebase-Extension.swift in Sources */,
+				2461B54B26F23FFC009BB1AD /* ProfileTextField.swift in Sources */,
 				2421CE7526F05392002C22AD /* UIColor-Extension.swift in Sources */,
 				247A121526F0C6C800A771B6 /* RegisterViewModel.swift in Sources */,
 				2430761626EF3011006637CC /* SceneDelegate.swift in Sources */,
