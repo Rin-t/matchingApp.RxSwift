@@ -103,3 +103,41 @@ extension Firestore {
         }
     }
 }
+
+
+extension Storage {
+    static func addProfileImageToStrage(image: UIImage, dic: [String: Any], completion: @escaping () -> ()) {
+        guard let uploadImage = image.jpegData(compressionQuality: 0.3) else { return }
+        let fileName = NSUUID().uuidString
+
+        let strageRef = Storage.storage().reference().child("profileImage").child(fileName)
+
+        Storage.storage().reference().child("profileImage").child(fileName).putData(uploadImage, metadata: nil) { metadata, err in
+
+            if let err = err {
+                print("画像の保存に失敗 :", err)
+                return
+            }
+
+            print("写真の保存に成功")
+            
+            strageRef.downloadURL { url, err in
+                if let err = err {
+                    print("画像の取得に失敗しました", err)
+                    return
+                }
+
+                print("画像の取得に成功")
+
+                guard let urlstring = url?.absoluteString else { return }
+                var dicWithImage = dic
+                dicWithImage["profileImageUrl"] = urlstring
+
+                Firestore.updateUserInfo(dic: dicWithImage) {
+                    completion()
+                    print("写真のデータをアップデートしました", err)
+                }
+            }
+        }
+    }
+}

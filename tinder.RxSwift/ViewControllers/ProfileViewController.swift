@@ -8,6 +8,7 @@
 import UIKit
 import RxSwift
 import FirebaseFirestore
+import FirebaseStorage
 
 final class ProfileViewController: UIViewController {
 
@@ -22,6 +23,7 @@ final class ProfileViewController: UIViewController {
     private var hobby = ""
     private var residence = ""
     private var introduce = ""
+    private var hasChangedImage = false
 
     //MARK: - UIviews
     let saveButton = UIButton(type: .system).createProfileTopButton(title: "保存")
@@ -52,20 +54,38 @@ final class ProfileViewController: UIViewController {
         saveButton.rx.tap
             .asDriver()
             .drive { [weak self] _ in
+                guard let self = self else { return }
                 let dic = [
-                    "name": self?.name,
-                    "age": self?.age,
-                    "email": self?.email,
-                    "residence": self?.residence,
-                    "hobby": self?.hobby,
-                    "introduce": self?.introduce
+                    "name": self.name,
+                    "age": self.age,
+                    "email": self.email,
+                    "residence": self.residence,
+                    "hobby": self.hobby,
+                    "introduce": self.introduce
                 ]
 
-                Firestore.updateUserInfo(dic: dic) {
-                    print("変更完了")
+                if self.hasChangedImage {
+                    guard let image = self.profileImageView.image else { return }
+                    Storage.addProfileImageToStrage(image: image, dic: dic) {
+
+                    }
+                } else {
+                    Firestore.updateUserInfo(dic: dic) {
+                        print("変更完了")
+                    }
                 }
             }
             .disposed(by: disposeBag)
+
+        profileEditButton.rx.tap
+            .asDriver()
+            .drive { [weak self] _ in
+                let pickerView = UIImagePickerController()
+                pickerView.delegate = self
+                self?.present(pickerView, animated: true, completion: nil)
+            }
+            .disposed(by: disposeBag)
+
 
     }
 
@@ -93,6 +113,18 @@ final class ProfileViewController: UIViewController {
     }
 }
 
+//MARK: - UIImagePickerControllerDelegate, UINavigationControllerDelegate
+extension ProfileViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[.originalImage] as? UIImage {
+            profileImageView.image = image
+        }
+        hasChangedImage = true
+        self.dismiss(animated: true, completion: nil)
+    }
+}
+
+//MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
@@ -150,4 +182,6 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
             .disposed(by: disposeBag)
     }
 }
+
+
 

@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     // 自分以外のユーザー
     private var users = [User]()
 
+    // views
     let topControlView = TopControlView()
     let cardView = UIView()
     let bottomControlView = BottomControlView()
@@ -62,7 +63,6 @@ class HomeViewController: UIViewController {
 
 
     //MARK: - Methods
-
     private func fetchUsers() {
         Firestore.fetchUsers { users in
             self.users = users
